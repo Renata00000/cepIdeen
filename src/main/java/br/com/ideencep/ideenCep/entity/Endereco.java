@@ -1,8 +1,9 @@
 package br.com.ideencep.ideenCep.entity;
 
 
+import jakarta.persistence.Entity;
 
-
+@Entity
 public class Endereco {
     private long id;
     private String cep;

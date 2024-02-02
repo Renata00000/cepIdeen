@@ -1,10 +1,13 @@
 package br.com.ideencep.ideenCep.util;
 
+import org.springframework.stereotype.Service;
+
 import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
+@Service
 public class BuscaCep {
     public String buscaEnderecoPorCep(String cep) {
         URI uri = URI.create("http://viacep.com.br/ws/"+cep+"/json/");
