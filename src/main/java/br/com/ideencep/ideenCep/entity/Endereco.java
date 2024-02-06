@@ -1,19 +1,24 @@
 package br.com.ideencep.ideenCep.entity;
 
 
-import jakarta.persistence.Entity;
+import lombok.Data;
 
-@Entity
+@Data
 public class Endereco {
-    private long id;
     private String cep;
-    private String tipoCep;
-    private String subTipoCep;
+    private String logradouro;
+    private String complemento;
+    private String Bairro;
+    private String localidade;
     private String uf;
-    private String cidade;
-    private String bairro;
-    private String endereco;
-    private String complemeto;
-    private String codigoIBGE;
+    private String ibge;
+    private String gia;
+    private String ddd;
+    private String siafi;
+
 }
+
+
+
+
 
