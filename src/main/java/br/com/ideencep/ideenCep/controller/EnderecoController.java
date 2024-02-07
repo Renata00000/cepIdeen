@@ -4,12 +4,13 @@ package br.com.ideencep.ideenCep.controller;
 
 
 import br.com.ideencep.ideenCep.util.BuscaCep;
-import org.hibernate.action.internal.EntityActionVetoException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.io.IOException;
 
 @RestController
 @RequestMapping(value = "/endereco")
@@ -18,7 +19,7 @@ public class EnderecoController {
 public BuscaCep service;
 
     @GetMapping(value = "/{cep}", produces = "application/json")
-    public String buscaPorCep(@PathVariable(name = "cep") String cep)  {
+    public String buscaPorCep(@PathVariable(name = "cep") String cep) throws Exception {
 
         return service.buscaEnderecoPorCep(cep);
     }
